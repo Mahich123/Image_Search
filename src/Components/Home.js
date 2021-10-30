@@ -37,6 +37,7 @@ function Home() {
             variant="standard"
             onChange={onChange}
             autoComplete="off"
+            value={query}
           />
           <input type="submit" value="search" />
         </form>
