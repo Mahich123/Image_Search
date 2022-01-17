@@ -8,7 +8,7 @@ function Home() {
 
   // const url = `https://api.sijey.repl.co/unsplash?q=${query}`;
 
-  const url = `https://imageapibysijey.mahi1233.repl.co/q=${query}`
+  const url = `https://imageapibysijey.mahi1233.repl.co/?q=${query}`;
 
   const geT = async () => {
     const res = await fetch(url);
@@ -52,6 +52,7 @@ function Home() {
             src={image}
             key={i}
             style={{ height: "254px", width: "226px" }}
+            alt="img"
           />
         ))}
         </IMG>
