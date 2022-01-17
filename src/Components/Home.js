@@ -3,10 +3,12 @@ import styled from "styled-components";
 import { TextField } from "@mui/material";
 
 function Home() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("");  
   const [images, setImages] = useState([]);
 
-  const url = `https://api.sijey.repl.co/unsplash?q=${query}`;
+  // const url = `https://api.sijey.repl.co/unsplash?q=${query}`;
+
+  const url = `https://imageapibysijey.mahi1233.repl.co/q=${query}`
 
   const geT = async () => {
     const res = await fetch(url);
