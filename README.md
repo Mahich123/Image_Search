@@ -70,7 +70,7 @@ Now submit the pull request.
 After reviewing you changes I will merge your codes in main branch.
 
 ### **7. Pull the changes**
-If come to do any more contribution your folders need to be update with repo In order keep that work flow updated you have to run the command as given bellow 
+If you come to do any more contribution your folders need to be update with repo In order keep that work flow updated you have to run the command as given bellow 
 
 ```
 git pull upstream master
