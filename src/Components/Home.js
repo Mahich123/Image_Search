@@ -43,7 +43,6 @@ function Home() {
       </Top>
 
       <Box>
-          <IMG>
         {images.map((image, i) => (
           <img
             src={image}
@@ -51,7 +50,7 @@ function Home() {
             alt="img"
           />
         ))}
-        </IMG>
+
       </Box>
     </Container>
   );
@@ -63,15 +62,23 @@ const Container = styled.div`
     text-align: center;
     input[type="submit" i] {
         border: none;
-        background: #4a4946;
-        color: #ffffff9e;
+        background: #230f85;
+        color: white;
         padding: 1em 2em 1em 2em;
         border-radius: 8px;
         margin-left: 0.5em;
         margin-top: 1em;
         cursor: pointer;
     }
+    input[type="submit" i]:hover{
+      background: #3a23a8;
+      border: 1px solid darkblue; 
+      transition: all 200ms ease-out;
+    }
+    }
 `;
+
+
 const Top = styled.div`
     margin-top: 1.5em;
     TextField {
