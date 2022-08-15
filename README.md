@@ -78,6 +78,8 @@ git pull upstream master
 
 It will fetch all the updates . 
 
+After getting all the files in your machine run `npm install` it will install all node modules in you directory and run ``npm start`` to check is project running or not 
+
 >**Congratulations!! You Just made a contribution . Keep oncontributing**  
 ---
 ## Author
