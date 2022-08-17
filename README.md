@@ -1,5 +1,7 @@
 <h1 align="center">🔎 Image Search 🔎</h1>
 
+[![Loading Image...](https://img.shields.io/github/issues/Mahich123/Image_Search?style=flat-square&color=orange)](https://github.com/Mahich123/Image_Search/issues)
+[![Loading Image](https://img.shields.io/badge/Made_with-Reactjs-60d2f1?style=flat-square&logo=react)](https://reactjs.org/)
 
 > This is a Image Searching App. You can search your images here. 
 ### 🏠 [Homepage](https://github.com/Mahich123/Image_Search)
