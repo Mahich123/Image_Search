@@ -33,3 +33,5 @@ We also have a Discord server where we discuss this project. If you're intereste
 I personally thank all the contributors for their valuable contributions.
 
 ![All Contributors](https://contributors-img.web.app/image?repo=mahich123/Image_Search)
+
+If you appreciate the work done by Mahi Chowdary and team, you can give a star to this repository.
