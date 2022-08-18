@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
+@font-face {
+  font-family: 'Montserrat';
+  src: url("https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format('woff2');
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -17,7 +20,7 @@ body {
   background: #162c8e; /* fallback for old browsers */
   background: linear-gradient(rgb(72, 0, 72, 0.8), rgba(10, 69, 106, 0.6)),
     url("https://source.unsplash.com/random?productivity,3d-render"); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(rgb(72, 0, 72, 0.8), rgba(2, 11, 52, 0.6)),
+  background: linear-gradient(rgb(72, 0, 72, 0.8), rgba(2, 11, 52, 0.6)), 
     url("https://source.unsplash.com/random?productivity,3d-render"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-repeat: no-repeat;
