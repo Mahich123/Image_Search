@@ -1,7 +1,5 @@
 # Image Search
 
-[![Loading Image](https://img.shields.io/badge/Discord-_-60d2f1?style=social&logo=discord)](https://discord.gg/eKrezHzEZH)
-
 [![gxHRoB.md.png](https://iili.io/gxHRoB.md.png)](https://freeimage.host/i/gxHRoB)
 
 *A web-app to explore and find images for your needs, which also offers free downloads without limitations. Built using Reactjs and founded by Mahi Chowdary*
