@@ -20,4 +20,6 @@ We also have a Discord server where we discuss this project. If you're intereste
 
 ## All Contributors
 
+I personally thank all the contributors for their valuable contributions.
+
 ![All Contributors](https://contributors-img.web.app/image?repo=mahich123/Image_Search)
