@@ -1,106 +1,37 @@
-<h1 align="center">🔎 Image Search 🔎</h1>
-
-[![Loading Image...](https://img.shields.io/github/issues/Mahich123/Image_Search?style=flat-square&color=orange)](https://github.com/Mahich123/Image_Search/issues)
-[![Loading Image](https://img.shields.io/badge/Made_with-Reactjs-60d2f1?style=flat-square&logo=react)](https://reactjs.org/)
-[![Loading Image](https://img.shields.io/badge/Discord-_-60d2f1?style=social&logo=discord)](https://discord.gg/eKrezHzEZH)
+# Image Search
 
 [![gxHRoB.md.png](https://iili.io/gxHRoB.md.png)](https://freeimage.host/i/gxHRoB)
-> This is a Image Searching App. You can search your images here. 
 
----
-### 🏠 [Homepage](image-search-tan.vercel.app/)
+A web-app founded by [Mahi Chowdary](https://github.com/Mahich123/) and team to explore and find images for your needs, which also offers free downloads without limitations.
 
-### ✨ [Demo](https://image-searching.netlify.app/)
+## Technologies used
 
----
-## Steps to Contribute
-### **1. Fork the repository**
-```
-Fork the repo by clicking on the fork button on the top of the page. 
-```
+The app frontend is built using ReactJS and styles with CSS, and the server-side programme is written in Python.
 
-[![fork.png](https://i.postimg.cc/KzPF3qTL/fork.png)](https://postimg.cc/CBx9W4mL)
+## Privacy Policy
 
-### **2. Clone the repository**
-```
-clone the repo to your machine by clicking on clone button.
-```
+No personal data shared with us will be given to any third party, under any circumstances. Your data will never be used by us for any purpose without specific permission.
 
-[![clone.png](https://i.postimg.cc/x1xxHRxc/clone.png)](https://postimg.cc/w1NQYhdp)
+The app engages in no ad targeting, data mining, or other activities that may compromise your privacy, and we do not affiliate ourselves with any third parties that do so.
 
->Open Terminal and run the command bellow to clone the repo
+## Open-source
 
-```
-git clone "url you just copied"
-```
-### **3. Create a branch**
+The frontend source files are open-source and distributed under the Unlicense by the author. But the server-side source files are closed-source.
 
-Now Create a Branch using the command bellow
+## Contribution
 
-```
-git checkout -b <add-your-name>
-```
+[![Loading Image...](https://img.shields.io/github/issues/Mahich123/Image_Search?color=orange)](https://github.com/Mahich123/Image_Search/issues)
 
+Contributions are always welcome.
 
-### **4. Make necessary changes and commit those changes**
+Read [CONTRIBUTING.md]() for more information.
 
-After Updating or completing word you need to commit those changes you have to use these commands to commit 
+We also have a Discord server where we discuss this project. If you're interested, you're always welcome to join [discord.gg/eKrezHzEZH](https://discord.gg/eKrezHzEZH).
 
-```
-    git add Contributors.md 
-```
-or 
-```
-    git add .
-```
-```
-git commit -m "Add a commnent like what you did or added"
-```
+## All Contributors
 
-### **5. Push changes to GitHub**
-Now you need to push all your works to github.
-```
-git push origin <add-your-name>
-```
+I personally thank all the contributors for their valuable contributions.
 
-### **6. Submit your changes for review**
+![All Contributors](https://contributors-img.web.app/image?repo=mahich123/Image_Search)
 
-If you go to your repository on GitHub, you’ll see a Compare & pull request button. Click on that button.
-
-![pullrequest.png](https://miro.medium.com/max/700/0*F-LrOSu0kL3fO_Nt.png)
----
-
-Now submit the pull request.
-![pullrequest.png](https://miro.medium.com/max/700/0*T1wiLQV5w5X42w1i.png)
-
-After reviewing you changes I will merge your codes in main branch.
-
-### **7. Pull the changes**
-If you come to do any more contribution your folders need to be update with repo In order keep that work flow updated you have to run the command as given bellow 
-
-```
-git pull upstream master
-```
-
-It will fetch all the updates . 
-
-After getting all the files in your machine run `npm install` it will install all node modules in you directory and run ``npm start`` to check is project running or not .
-
->**Congratulations!! You Just made a contribution . Keep oncontributing**  
----
-## Our Contributors
-[![Loading Image](https://contributors-img.web.app/image?repo=mahich123/Image_Search)](https://github.com/Mahich123/Image_Search/graphs/contributors)
-
----
-
-## Author
-
-👤 **Mahich123**
-
-* Website: https://mahichowdhury.netlify.app/
-* Github: [@Mahich123](https://github.com/Mahich123)
-* Linkedin: [Mahi Chowdhury](https://www.linkedin.com/in/mahi-chowdhury/)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
+If you appreciate the work done by Mahi Chowdary and team, you can give a star to this repository.
