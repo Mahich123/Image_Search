@@ -6,7 +6,7 @@ A web-app founded by [Mahi Chowdary](https://github.com/Mahich123/) and team to 
 
 ## Technologies used
 
-The app frontend is built using ReactJS and styles with CSS3 and the server-side programme is written in Python.
+The app frontend is built using ReactJS and styles with CSS, and the server-side programme is written in Python.
 
 ## Privacy Policy
 
