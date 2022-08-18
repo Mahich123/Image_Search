@@ -2,11 +2,11 @@
 
 [![gxHRoB.md.png](https://iili.io/gxHRoB.md.png)](https://freeimage.host/i/gxHRoB)
 
-*A web-app to explore and find images for your needs, which also offers free downloads without limitations. Built using Reactjs and founded by Mahi Chowdary*
+*A web-app founded by [Mahi Chowdary](https://github.com/Mahich123/) to explore and find images for your needs, which also offers free downloads without limitations.*
 
-## Author
+## Technologies used
 
-- [@Mahich123](https://github.com/Mahich123/)
+The app frontend is built using ReactJS and the server-side programme is written in Python.
 
 ## Contribution
 
