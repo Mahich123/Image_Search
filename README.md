@@ -14,10 +14,6 @@ No personal data shared with us will be given to any third party, under any circ
 
 The app engages in no ad targeting, data mining, or other activities that may compromise your privacy, and we do not affiliate ourselves with any third parties that do so.
 
-## Open-source
-
-The frontend source files are open-source and distributed under the Unlicense by the author.
-
 ## Contribution
 
 [![Loading Image...](https://img.shields.io/github/issues/Mahich123/Image_Search?color=orange)](https://github.com/Mahich123/Image_Search/issues)
