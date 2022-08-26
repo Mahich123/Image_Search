@@ -16,7 +16,7 @@ The app engages in no ad targeting, data mining, or other activities that may co
 
 ## Open-source
 
-The frontend source files are open-source and distributed under the Unlicense by the author. But the server-side source files are closed-source.
+The frontend source files are open-source and distributed under the Unlicense by the author.
 
 ## Contribution
 
