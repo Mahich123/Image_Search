@@ -1,12 +1,10 @@
 import "./App.css";
-import Home from "./Components/Home";
-import HomePage from "./Components/homePage/HomePage";
+
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-      {/* <Home /> */}
+    <div className="App bg-slate-500 m-[25rem] text-yellow-100 rounded-md p-4 text-center ">
+      <h1>Let's Start working</h1>
    </div>
   );
 }
