@@ -1,21 +1,52 @@
+import React, { useState, useEffect } from "react";
+import useFetch from "../../useFetch";
 import "./hero.css";
-import React from 'react';
 
-const hero = () => {
+const Hero = () => {
+  const [query, setQuery] = useState("");
+  const [imgs, setImgs] = useState([]);
+  
+  const { data, loading, error } = useFetch(`https://imageapibysijey.mahi1233.repl.co/?q=${query}`);
+  if (error) console.log(data);
+
+  // console.log(data);
+  // useEffect(() => {
+  //   setQuery("bob");
+  // }, [])
+  
+  const get = async () => {
+    setImgs(data.images);
+    setQuery("");
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    get();
+  }
+
+    const handleChange = (e) => {
+    setQuery(e.target.value);
+  };
+
   return (
-    <div className="hero bg-slate-900 h-screen">      
+    <div className="hero bg-dark-blue">      
       <section className="gallery">
         <div className="red w-full">
           <div className="headers">
             <h1 className="font-bold text-white drop-shadow-sm">Image Search</h1>
-            <h5 className="text-base text-white drop-shadow-sm">Freely-usaable images, Powered by creators worldwide</h5>
+            <h5 className="text-white drop-shadow-sm">Freely-usaable images, Powered by creators worldwide</h5>
           </div>
-          {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> */}
-          <div className="mb-3 xl:w-96">
-            <form className="input-group relative flex items-stretch w-full mb-4">
-              <input type="search" className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
-              <button className="btn px-6 ml-2 py-2.5 bg-cyan-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-800 hover:shadow-lg focus:bg-cyan-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-900 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <div className="mb-3">
+            <form onSubmit={handleSubmit} className="w-full input-group relative flex items-stretch">
+              <input
+                type="search"
+                className="py-3 px-5 form-control relative flex-auto min-w-0 block w-full text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="button-addon2"
+              />
+              <button onChange={handleChange} className="btn btn-search py-3 px-8 ml-2 bg-prime-g text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-800 hover:shadow-lg focus:bg-cyan-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-900 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="submit" id="button-addon2">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" className="w-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
                 </svg>
               </button>
@@ -103,9 +134,22 @@ const hero = () => {
           {/* <img src="https://source.unsplash.com/random/?fantasy,landscape" alt="Gallery 20" className="gallery__img" /> */}
           <img src="../img/20.webp" alt="Gallery 20" className="gallery__img" />
           </figure>
-        </section>
+      </section>
+
+      
+      {/***** for testing api *****/}
+
+      {/* <div className="h-40 w-40">
+      {imgs.map((image, i) => (
+          <img
+            src={image}
+            key={i}
+            alt="img"
+          />
+        ))}
+      </div> */}
     </div>
   )
 }
 
-export default hero
+export default Hero

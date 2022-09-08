@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Poppins:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Poppins:wght@400;500;700;900&display=swap");
 
 *,
 *::before,
@@ -6,16 +6,17 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .hero {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  height: 90vh;
 }
 
-.headers{
+.headers {
   -moz-text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   -webkit-text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   -ms-text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
@@ -25,8 +26,15 @@
   padding-bottom: 5px;
 }
 
-.headers h1{
-  font-size: 50px;
+.headers h1 {
+  font-size: 3.7vw;
+}
+.headers h5 {
+  font-size: 1.25vw;
+}
+
+.btn-search{
+  margin-right: -2rem!important;
 }
 
 .gallery {
@@ -50,9 +58,11 @@
 }
 
 .red {
-  background-color: #f00;
+  /* background-color: #f00; */
   grid-area: 7 / 5 / 8 / 13;
   z-index: 9;
+  margin-bottom: -2vh;
+  height: 83%;
 }
 
 .gallery__item--1 {
@@ -159,11 +169,25 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
+  .hero {
+    /* display: block; */
+    height: 45vh;
+  }
+  .headers {
+    margin-top: -4.5rem;
+    padding-bottom: 5px;
+  }
+  .headers h1 {
+    font-size: 7vw;
+  }
+  .headers h5 {
+    font-size: 3vw;
+  }
   .gallery {
     /* background: #e7e7e7; */
     margin: 0 auto;
     width: 100vw;
-    height: 50vh;
+    height: 40vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -171,10 +195,16 @@
     grid-row-gap: 5px;
   }
 
+  .red {
+    grid-area: 5 / 3 / 7 / 11;
+    /* height: 50%; */
+  }
+  .btn-search{
+  margin-right: 0rem!important;
+}
   .gallery__item--1 {
     grid-area: 5 / 3 / 7 / 11;
-    background: #f00;
-    /* Search bar here */
+    height: 0px;
   }
   .gallery__item--2 {
     grid-area: 1 / 1 / 7 / 3;
