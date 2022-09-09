@@ -1,11 +1,20 @@
 import "./App.css";
+import NavBar from "./Components/NavBar/NavBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from './Components/HomePage/HomePage';
 
 
 function App() {
   return (
-    <div className="App bg-slate-500 m-[25rem] text-yellow-100 rounded-md p-4 text-center ">
-      <h1>Let's Start working</h1>
-   </div>
+    <div className="App">
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+          
+      </Router>
+    </div>
   );
 }
 
