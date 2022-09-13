@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import './carousel2.css';
 import { gsap } from 'gsap';
 
-const itemz = [
+const itemList = [
   {
     img: "https://wise-step.surge.sh/assets/media/imgs/1.png",
     category: "electrics",
@@ -31,14 +31,28 @@ const itemz = [
     price: "£267",
     bgColor: "#dedede",
   },
+  {
+    img: "../img/10.webp",
+    category: "Image Search",
+    title: "Sam Takahashi",
+    price: "¥10,000",
+    bgColor: "#748F99",
+  },
 ];
 
 export function Carousel2() {
+  const el = useRef();
+  const q = gsap.utils.selector(el);
   const timeLine = gsap.timeline();
   const [active, setActive] = useState(0);
-  const items = itemz;
+  const [sliCon, setSliCon] = useState();
+  const [sliIdx, setSliIdx] = useState();
+  const items = itemList;
   
-  const basicAimation = (dir, delay) => {
+  useEffect(() => {
+    const dir = 0.5;
+    const delay = 0.5;
+
     timeLine.to(".slider", {
       delay,
       duration: 0.2,
@@ -77,26 +91,28 @@ export function Carousel2() {
       },
       "<"
     );
-  }
-  basicAimation(0.5, 0.5);
 
-  const [sliCon, setSliCon] = useState();
-  const [sliIdx, setSliIdx] = useState();
+    setSliCon(SliCont);
+    setSliIdx(SliIndex);
 
-  useEffect(() => {
-    const { img, category, title, price } = items[active];
+    return () => {
+      timeLine.kill()
+    };
+  }, [active, items]);
 
-  function SliCont() {
-    return (
-      <>
-        <img className="slider__img" src={img} alt={title} />
-        <div className="slider__context flex-column">
-          <h3 className="slider__category">{category}</h3>
-          <strong className="slider__title">{title}</strong>
-          <small className="slider__price">{price}</small>
-        </div>
-      </>
-    );
+  const { img, category, title, price } = items[active];
+  
+    function SliCont() {
+      return (
+        <>
+          <img className="slider__img" src={img} alt={title} />
+          <div className="slider__context flex-column">
+            <h3 className="slider__category">{category}</h3>
+            <strong className="slider__title">{title}</strong>
+            <small className="slider__price">{price}</small>
+          </div>
+        </>
+      );
     }
     function SliIndex() {
       return (
@@ -111,15 +127,12 @@ export function Carousel2() {
       );
     }
 
-    setSliCon(SliCont);
-    setSliIdx(SliIndex);
-  }, [active, items]);
-
   const handleClick = (e)=> {
     const type = e.target.getAttribute('data-type');
     const dir = type === "next" ? 1 : -1;
     
-    timeLine.to(".slider__img", {
+    timeLine.to(
+      q(".slider__img"), {
       x: -250 * dir,
       opacity: 0,
       duration: 1,
@@ -133,13 +146,11 @@ export function Carousel2() {
           const actTwo = active <= 0 ? items.length - 1 : active - 1;
           setActive(actTwo);
         }
-
-      // basicAimation(dir);
       },
     });
 
     timeLine.to(
-      " .slider__context *",
+      q(" .slider__context *"),
       {
         x: -100 * dir,
         opacity: 0,
@@ -153,7 +164,7 @@ export function Carousel2() {
 
 
   return (
-    <div className="slider">
+    <div ref={el}  className="slider">
       <div className="inner-container">
         <div className="slider__wrraper flex-column">
         <div className="flex-column slider__content">{sliCon}</div>
