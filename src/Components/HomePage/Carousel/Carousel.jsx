@@ -1,271 +1,190 @@
-import React, {useState , useRef, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import './carousel.css';
 import { gsap } from 'gsap';
 
-const slides = [
+const itemList = [
   {
-    name: "Julia Cameron",
-    title: "Creative Director, VISA",
-    // image: `${require("../img/1.webp")}`,
-    image: "../img/1.webp",
-    quote:
-      "It's all good. I was amazed at the quality of the Design. We've seen amazing results already."
+    img: "../img/carousel/turq.webp",
+    category: "Architecture",
+    title: "Modern Design",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
+    bgColor: "#fff",
   },
   {
-    name: "Mark Jacobs",
-    title: "Tech Lead, Google",
-    // image: `${require("../2.webp")}`,
-    image: "../img/2.webp",
-    quote:
-      "The rebranding has really helped our business. Definitely worth the investment."
+    img: "../img/carousel/red.webp",
+    category: "Supercars",
+    title: "Ferrari LaFerrari",
+    desc: "Consectetur adipisicing elit. Dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
+    bgColor: "#FFD4D8",
   },
   {
-    name: "Lisa Bearings",
-    title: "Brand Coordinator, Facebook",
-    // image: `${require("././3.webp")}`,
-    image: "../img/3.webp",
-    quote:
-      "The service was excellent. Absolutely wonderful! A complete redesign did it for us."
-  }
+    img: "../img/carousel/yellow.webp",
+    category: "Mobile",
+    title: "Custom iPhone ",
+    desc: "Dolor sit amet consectetur adipisicing elit. Repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
+    bgColor: "#F0E2A2",
+  },
+  {
+    img: "../img/carousel/green.webp",
+    category: "Nature",
+    title: "Green Adventure",
+    desc: "Adipisicingorem dolor sit lor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum amet consectetur adipisicing elit.",
+    bgColor: "#CCEDD5",
+  },
+  {
+    img: "../img/carousel/purple.webp",
+    category: "Cuisine",
+    title: "Berry Bars",
+    desc: "Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum...",
+    bgColor: "#FED6ED",
+  },
 ];
 
-
-export const Carousel = () => {
-
-    const renderItem = () => {
-    const { img, category, title, price } = this.items[this.active];
-
-    const sliderContent = `
-      <img class="slider__img" src="${img}" alt="${title}" />
-      <div class="slider__context flex-column">
-        <h3 class="slider__category">${category}</h3>
-        <strong class="slider__title">${title}</strong>
-        <small class="slider__price">${price}</small>
-      </div>
-    `;
-    const sliderIndex = `
-      <span>${
-        this.active < 10 ? "0" + (this.active + 1) : this.active + 1
-      }</span>
-      <span>${
-        this.items.length < 10 ? "0" + this.items.length : this.items.length
-      }</span>
-    `;
-
-    document.querySelector(".slider__content").innerHTML = sliderContent;
-    document.querySelector(".slider__index").innerHTML = sliderIndex;
-  }
-
-
-  let imageList = useRef(null);
-  let descList = useRef(null);
-
-  const imageWidth = 340;
-
-  const [state, setState] = useState({
-    isActive1: true,
-    isActive2: false,
-    isActive3: false
-  });
-
+export function Carousel() {
+  const timeLine = gsap.timeline();
+  const [active, setActive] = useState(0);
+  const items = itemList;
+  
   useEffect(() => {
-    // console.log(imageList.children[0])
-    gsap.to(descList.children[0], {
-      duration: 0,
-      opacity: 1,
+    const dir = 0.8;
+    const delay = 0.3;
+
+    timeLine.to(".slider", {
+      delay,
+      duration: 0.2,
+      backgroundColor: `${items[active].bgColor}`,
     });
-  }, []);
-
-  const slideLeft = (index, dur, multiplied = 1) => {
-    gsap.to(imageList.children[index], {
-      x: -imageWidth * multiplied,
-      duration: dur,
-      ease: "power2.inOut",
-      // ease: "power3.easeOut",
-    })
-  }
-
-  const slideRight = (index, dur, multiplied = 1) => {
-    gsap.to(imageList.children[index], {
-      x: imageWidth * multiplied,
-      duration: dur,
-      ease: "power2.inOut",
-      // ease: "power3.easeOut",
-    })
-  }
-
-  const scale = (index, dur) => {
-    gsap.from(imageList.children[index], {
-      duration: dur,
-      scale: 1.6,
-      ease: "power2.inOut",
-      // opacity:0
-      // ease: "power3.easeOut",
-    })
-  }
-
-  const fadeOut = (index, dur) => {
-    gsap.to(descList.children[index], {
-        duration: dur,
-        y: -100,
+    timeLine.fromTo(
+      ".slider__img",
+      {
+        x: 150 * dir,
         opacity: 0,
-        clearProps: "y"
-      });
-  }
-
-  const fadeIn = (index, dur) => {
-    gsap.to(descList.children[index], {
-        duration: dur,
+        duration: 1,
+        ease: "power2.out",
+      },
+      {
+        x: 0,
         opacity: 1,
-        delay: 1
-      });
-  }
-
-  const nextSlide = () => {
-    if (imageList.children[0].classList.contains("active")) {
-      setState({
-        isActive1: false,
-        isActive2: true,
-      })
-
-      slideLeft(0, 1);
-      slideLeft(1, 1);
-      scale(1, 1.5);
-      slideLeft(2, 1);
-      slideLeft(2, 0);
-      fadeOut(0, 1);
-      fadeIn(1, 1);
-      gsap.to(imageList.children[0], {
-        scale: 1.5,
         duration: 1,
-        clearProps: "scale",
-      })
-    } else if (imageList.children[1].classList.contains("active")) {
-      setState({
-        isActive2: false,
-        isActive3: true,
-      })
-      slideRight(0, 1);
-      slideLeft(1, 1, 2);
-      slideLeft(2, 1, 2);
-      scale(2, 1.5);
-      fadeOut(1, 1);
-      fadeIn(2, 1);
+        ease: "power2.out",
+      }
+    );
+    timeLine.fromTo(
+      ".slider__context *",
+      {
+        x: 50 * dir,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.15,
+        ease: "power2.out",
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.7,
+        stagger: 0.15,
+        ease: "power2.out",
+      },
+      "<"
+    );
+    
+    return () => {
+      timeLine.kill()
+    };
+  }, [active, items]);
 
-    } else if (imageList.children[2].classList.contains("active")) {
-      setState({
-        isActive3: false,
-        isActive1: true,
-      })
-      slideLeft(2, 1, 3);
-      slideLeft(0, 1, 0);
-      slideLeft(1, 0, 0);
-      scale(1, 1.6);
-      fadeOut(2, 1);
-      fadeIn(0, 1);
-      gsap.from(imageList.children[0], {
-        scale: 2.5,
-        duration: 1,
-      })
-    }
-  };
+  const { img, category, title, desc } = items[active];
+  const handleClick = (e)=> {
+    const type = e.target.getAttribute('data-type');
+    const dir = type === "next" ? 1 : -1;
+    
+    timeLine.to(
+      ".slider__img", {
+      x: -250 * dir,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.inOut",
 
-  const prevSlide = () => {
-    if (imageList.children[0].classList.contains("active")) {
-      setState({
-        isActive1: false,
-        isActive3: true,
-      })
-      
-      slideLeft(2, 0, 3);
-      slideLeft(2, 1, 2);
-      scale(2, 1);
-      slideRight(0, 1);
-      slideRight(1, 1);
+      onComplete: () => {
+        if (type === "next") {
+          const actOne = active === items.length - 1 ? 0 : active + 1;
+          setActive(actOne);
+        } else {
+          const actTwo = active <= 0 ? items.length - 1 : active - 1;
+          setActive(actTwo);
+        }
+      },
+    });
 
-      fadeOut(0, 1);
-      fadeIn(2, 1);
+    timeLine.to(
+      " .slider__context *",
+      {
+        x: -100 * dir,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.15,
+        ease: "power2.inOut",
+      },
+      "<"
+    );
+  } 
 
-    } else if (imageList.children[1].classList.contains("active")) {
-      setState({
-        isActive2: false,
-        isActive1: true,
-      })
-     
-    } else if (imageList.children[2].classList.contains("active")) {
-      setState({
-        isActive3: false,
-        isActive2: true,
-      })
-     
-    }
-  };
 
   return (
-    <div className="testimonial-section">
-      <div className="testimonial-container">
-        <div onClick={prevSlide} className="arrows left">
-          <span>
-            <img src="../svg/left-arrow.svg" alt="left arrow" />
-          </span>
-        </div>
-        <div className="inner">
-          <div className="t-image">
-            <ul ref={el => (imageList = el)}>
-              <li className={state.isActive1 ? "active" : ""}>
-                <img src={slides[0].image} alt={slides[0].name} />
-              </li>
-              <li className={state.isActive2 ? "active" : ""}>
-                <img src={slides[1].image} alt={slides[0].name} />
-              </li>
-              <li className={state.isActive3 ? "active" : ""}>
-                <img src={slides[2].image} alt={slides[0].name} />
-              </li>
-            </ul>
-          </div>
-          <div className="t-content">
-            <ul ref={el => (descList = el)}>
-              <li className={state.isActive1 ? "active" : ""}>
-                <div className="content-inner">
-                  <p className="quote">{slides[0].quote}</p>
-                  <h3 className="name">{slides[0].name}</h3>
-                  <h4 className="title">{slides[0].title}</h4>
+    <div className='main-container'>
+      <div className="slider">
+        <div className="inner-container">
+          <img src="../img/bg-pattern01.webp" alt="Gallery 04" className="bg-img" />
+          <div className="slider__wrapper flex-column">
+            <div className="flex-column slider__content">
+              <div className="img-container">
+                <img className="slider__img" src={img} alt={title} />
+                 <div className="flex-center">
+                  <button
+                    onClick={handleClick}
+                    data-type="prev"
+                    className="slider__btn-switch slider__btn-switch--dark flex-center"></button>
+                  <button
+                    onClick={handleClick}
+                    data-type="next"
+                    className="slider__btn-switch slider__btn-switch--light flex-center"></button>
                 </div>
-              </li>
-              <li className={state.isActive2 ? "active" : ""}>
-                <div className="content-inner">
-                  <p className="quote">{slides[1].quote}</p>
-                  <h3 className="name">{slides[1].name}</h3>
-                  <h4 className="title">{slides[1].title}</h4>
-                </div>
-              </li>
-              <li className={state.isActive3 ? "active" : ""}>
-                <div className="content-inner">
-                  <p className="quote">{slides[2].quote}</p>
-                  <h3 className="name">{slides[2].name}</h3>
-                  <h4 className="title">{slides[2].title}</h4>
-                </div>
-              </li>
-            </ul>
+              </div>
+              <div className="slider__context flex-column">
+                <h3 className="slider__category">{category}</h3>
+                <strong className="slider__title">{title}</strong>
+                <small className="slider__price">{desc}</small>
+              </div>
+              <div className="slider__index">
+                <span>{
+                  active < 10 ? "0" + (active + 1) : active + 1
+                }</span>
+                <span>{
+                  items.length < 10 ? "0" + items.length : items.length
+                }</span>
+              </div>
+            </div>
+            <div className="slider__footer">
+              <div className="slider__btns justify-between">
+                {/* <span className="slider__btn-buy000"></span> */}
 
-          {/* <ul>
-  //           {slides.map((idx) => (
-  //             <li key={idx.image}>
-  //             <div className="content-inner">
-  //               <p className="quote">{ idx.quote}</p>
-  //               <h3 className="name">{ idx.name}</h3>
-  //               <h4 className="title">{ idx.title}</h4>
-  //             </div>
-  //           </li>
-  //           ))}
-  //         </ul> */}
-            
+                {/* <div className="flex-center">
+                  <button
+                    onClick={handleClick}
+                    data-type="prev"
+                    className="slider__btn-switch slider__btn-switch--dark flex-center"></button>
+                  <button
+                    onClick={handleClick}
+                    data-type="next"
+                    className="slider__btn-switch slider__btn-switch--light flex-center"></button>
+                </div> */}
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="arrows right" onClick={nextSlide}>
-          <img src="../svg/right-arrow.svg" alt="right arrow" />
         </div>
       </div>
     </div>
-  );
+  )
 }
+
+
