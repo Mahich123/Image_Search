@@ -37,7 +37,7 @@ const Contributors = () => {
         <p className='text-white font-epi work text-[14px] lg:w-[23vw]'><span className='text-[#748F99] font-epi contspan'>Contribution:</span> Frontend, UI, UX</p>
          <div className='flex justify-center'>
           <button className='hrline rounded-full  px-4 py-2 text-[12px]  mt-[0.3rem] text-white border-2 border-white bg-transparent hover:bg-[#748F99] '>
-            <a href='https://github.com/Mahich123'>
+            <a href='https://github.com/cj-praveen'>
               Github
             </a>
           </button>
@@ -56,7 +56,7 @@ const Contributors = () => {
         <p className='text-white font-epi work text-[14px] lg:w-[23vw]'><span className='text-[#748F99] font-epi contspan'>Contribution:</span> Frontend, UI, UX</p>
          <div className='flex justify-center'>
           <button className='hrline rounded-full  px-4 py-2 text-[12px]  mt-[0.3rem] text-white border-2 border-white bg-transparent hover:bg-[#748F99] '>
-            <a href='https://github.com/Mahich123'>
+            <a href='https://github.com/Sam-Takahashi'>
               Github
             </a>
           </button>
