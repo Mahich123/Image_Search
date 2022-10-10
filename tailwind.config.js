@@ -18,6 +18,9 @@ module.exports = {
         "light-blue": "#B9C7CC",
         "prime-g": "#748F99",
       },
+      fontFamily: {
+        epi: "'Epilogue', sans-serif"
+      },
     },
   },
   plugins: [],

@@ -11,7 +11,7 @@
   overflow: hidden;
   flex-direction: column;
   color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 button {
   all: unset;
@@ -111,7 +111,7 @@ button {
 .slider__price {
   font-size: 0.5em;
   font-weight: lighter;
-  font-family: sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 .context {
   display: flex;
@@ -172,7 +172,7 @@ button {
   font-size: 1.85em;
   visibility: hidden;
   position: absolute;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Epilogue', sans-serif;
   justify-content: center;
   bottom: 4%;
   /* bottom: calc(100% + 0.8em); */
