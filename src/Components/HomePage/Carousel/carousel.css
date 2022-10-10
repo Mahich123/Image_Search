@@ -5,8 +5,6 @@
   --color-secondary-rgb: #748f99;
 }
 .main-container {
-  /* height: 100vh; */
-  min-height: 100vh;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -190,7 +188,7 @@ button {
   background-color: var(--color-primary);
 }
 
-@media (min-width: 490px) {
+@media (min-width: 570px) {
   .slider__img {
     /* width: 29rem;
     margin-bottom: -1rem; */
@@ -224,7 +222,7 @@ button {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .main-container {
     height: 100%;
   }
