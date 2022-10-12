@@ -28,7 +28,10 @@ Contributions are always welcome.
 
 Read [CONTRIBUTING.md](https://github.com/Mahich123/Image_Search/blob/main/CONTRIBUTING.md) for more information.
 
-We also have a Discord server where we discuss this project. If you're interested, you're always welcome to join [discord.gg/eKrezHzEZH](https://discord.gg/eKrezHzEZH).
+We also have a Discord server where we discuss this project. If you're interested, you're always welcome to join 
+
+[![](https://gist.githubusercontent.com/cj-praveen/2b17234c63a35ffa54993b9a5b276a25/raw/c6c9f17908a55597987ae7346e5b0fd7d260f248/discord.svg)](https://discord.gg/eKrezHzEZH)
+[discord.gg/eKrezHzEZH](https://discord.gg/eKrezHzEZH).
 
 ---
 
