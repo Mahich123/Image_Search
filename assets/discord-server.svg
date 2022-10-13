@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300" width="600" viewBox="0 0 600 300">
+  <pattern id="server_icon" x="0" y="0" width="64" height="64">
+    <image x="-1" y="-1" width="30" height="30" xlink:href="data:image/webp;base64,UklGRgYFAABXRUJQVlA4WAoAAAAQAAAAfwAAfwAAQUxQSOABAAABkCRJkiJJ/3/VXpmpaZinoTg5whe7MhJOSxExAYz//v/v/9+sVdu1Q7XspEb+cRz6ieujlcexvu8qEybCXOpUTZxFTNPWQwfE9U0tTEDscKiDJ8T3TQ18gKQbRZwxVABnIWumaH4a1TjqrreZkYP0OMXhUeHnrDuXEzvITzaGagnHqi4f0kixd7N4rzCTDj4TNkjz4GeMW8b8xuRhkWpHx/B9j6ityUFzMtzyr/SlR+SDTU8T0qXdL7a3iP/oUnOMlKn9gc8aSD6GtGxA2r4H7EJDlO45JeeQuu77zwHCdJNQ8EhfPYG8v08mOOR4vZSD2SYSDPI8O5fDuE2CLXJd3MihP6Rgke+HnRyaTowVZ4R3vRweBinDyJmeWTncKhnHyPyplcO1lTABubtXJMdnFM8G5G9esRhwQrFCQAmHtwn4c47jHcrYLuRgzqMEi1JuT+UwXUZgh3JeX8lhuJtFBiW9eJRDs53BCmU96+TwuD/OorSLSQ4P/TGai4MvRg630680oby89nK4sD9zhBL7Bcvhwv/gAsrslixHlwQ4h1KbSzmEC5BHuYcbObhgUfLmXg4aZW8aueJvh9rhdqodHmztcB9qR1e1A+64dmFfO9hd7WDa2sFMtcOoaodeRwJWUDggAAMAANAUAJ0BKoAAgAA+bTaVR6QjIiEoFAmAgA2JQBmgEL+d5vjJfxHel95jvO687f0cuo53lP9vaRL4ldnMoIKYvMHp5QvXgTsfrPKhJTmanjDcTs1E5uNOLD4FnwnPdAmR4FBEpAhgf6D0JEfzDgtcXtOBBEIYkxAeMJqXLEc7hX4yQEkQhONiLapYocgG5UolRU6xWaA4sAYJEs3gxN+vlk39//xgoPxAvmYAYbUhFYAA/vqD4riWVit5P39Q3UWKPghQS2S4W4tpnDWLFAt7GgJUaCIlfTnd4WHUH8kjdFG/FlE3xeVoNF5ZkoUR/F400GOZoj7Z1LC0QZgVSzLCWedF2Axq+St7raK30eTYcqwwTm/Tn6psSdn9UIP3yj8Lj5nuWQvDq3z3GZokBxyakDL+edwcv08xpLYuQAEuqEvrgfSRIqPyPlLrgZFDKZeLWtg1bM0Srzry3/flDRVnm0BLiYGCdZuMAP8P+smvF6En/+L7GozjE7xW8OQ17IBPxFrG5faAdYUgS/RaKxcKMmVAyFZdaUEe9teMqO//LpGloaFCrz/tj/XxB30m5QamdnXD0ghyzgXfMQiRwMXtQMzAp8yGRZJ7Jtkp9EMg6TUoLmY7INjnvwWqYW+EqEuHDgjAj4gTpDBvEjdpCfkoj9ZA1wsS3e3npwoxdFl/RPO0dxR/mfBVM+bfR7gOFf5M7p2hSnumahDgQaONhVpIi2PPKIRFkwh8l1w2Thk8xxgyYKt+Welexx39GX3+erKWZ8SZxDU1O5sUfzoLkuX99sEklRBffvEfdf8C+PYdmMHQrrGwReH6ejcQL/yIw/8ZfAT4eI64y+Eh/0MCn2elN0LHGWfSSWkCmk8RkSPI1qzX21o8ugNsOjvwNF4cdmxOxcm5/HrjdzerBaiRDOy/0YkrLSUvhCF8XG46Swcmp1/YpEnJ+yOLnukFaebl0WwO6Df5ftPjjA9fPcAc/rW9zJBTAqMeK+wWYqjmZzNUrGWmx9XZkiP9SOLyTIE/Lb6gAA=="/>
+  </pattern>
+  <rect fill="#202225" height="300" width="50" x="0" y="0" rx="0" ry="0"/>
+  <rect fill="#2f3136" height="300" width="150" x="49" y="0" rx="0" ry="0"/>
+  <rect fill="#36393f" height="300" width="250" x="198" y="0" rx="0" ry="0"/>
+  <rect fill="#2f3136" height="300" width="150" x="447" y="0" rx="0" ry="0"/>
+  <circle fill="#FF605C" r="3" cx="14" cy="10"/>
+  <circle fill="#FFBD44" r="3" cx="24" cy="10"/>
+  <circle fill="#00CA4E" r="3" cx="34" cy="10"/>
+  <circle fill="#36393f" r="14" cx="24" cy="34"/>
+  <circle fill="#36393f" r="14" cx="24" cy="77"/>
+  <circle fill="url(#server_icon)" r="14" cx="24" cy="110"/>
+  <circle fill="#36393f" r="14" cx="24" cy="142"/>
+  <rect fill="#36393f" height="2" width="20" x="14" y="54" rx="1" ry="1"/>
+  <rect fill="#36393f" height="17" width="125" x="60" y="10" rx="4" ry="4"/>
+  <rect fill="#36393f" height="17" width="125" x="60" y="35" rx="4" ry="4"/>
+  <rect fill="#36393f" height="17" width="125" x="60" y="60" rx="4" ry="4"/>
+  <rect fill="#36393f" height="17" width="125" x="60" y="85" rx="4" ry="4"/>
+  <rect fill="#36393f" height="17" width="125" x="60" y="110" rx="4" ry="4"/>
+  <rect fill="#36393f" height="17" width="125" x="60" y="135" rx="4" ry="4"/>
+  <rect fill="#40444b" height="20" width="227" x="210" y="270" rx="4" ry="4"/>
+  <g>
+    <circle fill="#40444b" r="9" cx="465" cy="20"/>
+    <rect fill="#40444b" height="5" width="100" x="480" y="14" rx="2" ry="2"/>
+    <rect fill="#40444b" height="2" width="70" x="480" y="24" rx="1" ry="1"/>
+  </g>
+  <g>
+    <circle fill="#40444b" r="9" cx="465" cy="45"/>
+    <rect fill="#40444b" height="5" width="100" x="480" y="40" rx="2" ry="2"/>
+    <rect fill="#40444b" height="2" width="70" x="480" y="50" rx="1" ry="1"/>
+  </g>
+  <g>
+    <circle fill="#40444b" r="9" cx="465" cy="70"/>
+    <rect fill="#40444b" height="5" width="100" x="480" y="65" rx="2" ry="2"/>
+    <rect fill="#40444b" height="2" width="70" x="480" y="75" rx="1" ry="1"/>
+  </g>
+</svg>
