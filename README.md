@@ -16,7 +16,7 @@ The app engages in no ad targeting, data mining, or other activities that may co
 
 ## Contribution
 
-![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-0078AA)
+[![PRs Welcome](https://img.shields.io/badge/contributions-welcome-0078AA)](https://github.com/Mahich123/Image_Search/pulls)
 [![Loading Image...](https://img.shields.io/github/issues/Mahich123/Image_Search?color=orange)](https://github.com/Mahich123/Image_Search/issues)
 
 Contributions are always welcome.
