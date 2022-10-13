@@ -1,20 +1,20 @@
 # Image Search
 
-[![gxHRoB.md.png](https://iili.io/gxHRoB.md.png)](https://freeimage.host/i/gxHRoB)
+[![https://image-search-tan.vercel.app/](assets/preview.svg)](https://image-search-tan.vercel.app/)
 
-A web-app founded by [Mahi Chowdary](https://github.com/Mahich123/) and team to explore and find images for your needs, which also offers free downloads without limitations.
+A web-app founded by [Mahi Chowdary](https://github.com/Mahich123/) and team to explore and find images for your needs, which also offers free downloads without limitations and upload your creativity.
 
 ---
 
 ## Technologies used
-
-The app frontend is built using ReactJS and styles with CSS, and the server-side programme is written in Python.
+- ReactJS
+- TailwindCSS
 
 ---
 
 ## Privacy Policy
 
-No personal data shared with us will be given to any third party, under any circumstances. Your data will never be used by us for any purpose without specific permission.
+No personal data shared with us will be given to any third party. Your data will never be used by us for any purpose without specific permission.
 
 The app engages in no ad targeting, data mining, or other activities that may compromise your privacy, and we do not affiliate ourselves with any third parties that do so.
 
@@ -30,8 +30,8 @@ Read [CONTRIBUTING.md](https://github.com/Mahich123/Image_Search/blob/main/CONTR
 
 We also have a Discord server where we discuss this project. If you're interested, you're always welcome to join 
 
-[![](https://gist.githubusercontent.com/cj-praveen/2b17234c63a35ffa54993b9a5b276a25/raw/c6c9f17908a55597987ae7346e5b0fd7d260f248/discord.svg)](https://discord.gg/eKrezHzEZH)
-[discord.gg/eKrezHzEZH](https://discord.gg/eKrezHzEZH).
+[![Join our discord server](assets/discord-server.svg)](https://discord.gg/eKrezHzEZH)<br>
+[<img alt="Join our discord server" src="https://images.squarespace-cdn.com/content/v1/5cd3e3917046805e4d6700e3/1560193788834-KYURUXVSZAIE4XX1ZB2F/ke17ZwdGBToddI8pDm48kK6MRMHcYvpidTm-7i2qDf_lfiSMXz2YNBs8ylwAJx2qLijIv1YpVq4N1RMuCCrb3iJz4vYg48fcPCuGX417dnbl3kVMtgxDPVlhqW83Mmu6GipAUbdvsXjVksOX7D692AoyyEsAbPHhHcQMU6bWQFI/join_discord_button_small.png" width="180" />](https://discord.gg/eKrezHzEZH)
 
 ---
 
