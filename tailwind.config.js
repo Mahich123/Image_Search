@@ -21,6 +21,13 @@ module.exports = {
       fontFamily: {
         epi: "'Epilogue', sans-serif"
       },
+      backgroundImage: {
+        'card1': "url('../public/img/Genre/card1.png')",
+        'card2': "url('../public/img/Genre/card2.png')",
+        'card3': "url('../public/img/Genre/card3.png')",
+        'card4': "url('../public/img/Genre/card4.png')",
+        'card5': "url('../public/img/Genre/card5.png')",
+      },
     },
   },
   plugins: [],
