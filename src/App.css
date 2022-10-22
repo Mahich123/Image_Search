@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+*, *::before, *::after {
+    user-select: none !important; /* https://developer.mozilla.org/en-US/docs/Web/CSS/user-select */
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -webkit-tap-hightlight-color: transparent  !important; /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color */
+    -webkit-touch-callout: none !important; /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout */
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::selection */
+*::selection, *::before::selection, *::after::selection {
+    color: unset !important;
+    background: transparent !important;
+}
+
 .hrline {
     border: 1px solid;
 }
+
