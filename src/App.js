@@ -7,6 +7,7 @@ import Explore from "./Components/HomePage/Explore/Explore";
 import Contributors from "./Components/HomePage/Contributors/Contributors2";
 import Contact from "./Components/HomePage/Contact/Contact";
 import Footer from "./Components/HomePage/Fotter/Footer";
+import SearchResult from "./Components/HomePage/SearchResult/SearchResult";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/result" element={<SearchResult />} />
         </Routes>
         <Genre />
         <Explore />
