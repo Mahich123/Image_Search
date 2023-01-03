@@ -1,5 +1,6 @@
 {
-  "name": "imagesearch",
+  "name": "image search",
+  "proxy": "https://api.pexels.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,6 +43,7 @@
       "last 1 safari version"
     ]
   },
+  
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "postcss": "^8.4.16",
