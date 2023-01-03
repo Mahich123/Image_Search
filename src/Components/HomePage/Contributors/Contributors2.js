@@ -22,7 +22,7 @@ const Contributors2 = () => {
     </div>
 
     {
-        data.map((elem) => {
+        data.map((elem,) => {
             return (
                <>
                  <div className=' items-center lg:w-[80vw] lg:flex lg:flex-row lg:items-center lg:justify-between lg:pt-[29px] pt-[1.5rem]'>

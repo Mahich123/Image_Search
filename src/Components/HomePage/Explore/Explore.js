@@ -9,9 +9,9 @@ const Explore = () => {
             <img className='h-[23px]' src='../img/explore/vector.png'/>
        </div>
         <div className='grid grid-cols-3 gap-3 pt-[2rem] p-[6rem]'>
-            {explore.map((i) => {
+            {explore.map((post, index) => {
                 return (
-                    <img className='h-[50vh]' src= {i.img}/>
+                    <img className='h-[50vh]' key ={index} src= {post.img}/>
                 )
             })}
         </div>
