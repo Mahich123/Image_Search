@@ -1,22 +1,78 @@
-import React from 'react'
-import explore from './explore.json'
+import React, { useState, useEffect } from 'react';
+import Loader from '../../Loader/Loader';
+
 
 const Explore = () => {
+	
+    const [photos, setPhotos] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);  
+		const [isError, setIsError] = useState(false)
+		const [error, setError] = useState({})
+
+    const baseurl = "https://api.pexels.com/v1/search?query=modern&per_page=60";
+  
+    useEffect(() => {
+			setIsLoading(true)
+			setIsError(false)
+			setError({})
+
+			const controller = new AbortController()
+			const { signal } = controller
+
+      async function fetchData() {
+       // fetch api
+          const response = await fetch(baseurl, {
+            method: "GET",
+            mode: "cors",
+              headers: {
+                Authorization: process.env.REACT_APP_API_KEY,
+                "Content-Type": "application/json",
+              }
+        }) // handle errors
+				.catch(err => {
+					setIsLoading(false)
+					if ( signal.aborted) return
+					setIsError(true)
+					setError({ message: err.message })
+		
+				});
+				// response
+        const data = await response.json();
+        setPhotos(data.photos);
+        setIsLoading(false);
+      }
+      fetchData();
+    }, [baseurl]);
+  
+		// Error Message
+		if (isError) return (
+			<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative m-4" role="alert">
+				<strong class="font-bold">Opps!</strong> &nbsp;
+				<span class="block sm:inline">Error: {error.message}</span>
+			</div>
+    )
+
   return (
-    <div>
-       <div className='flex items-center justify-between px-[6rem]'>
-            <h1 className='text-[2rem]'>Explore</h1>
-            <img className='h-[23px]' src='../img/explore/vector.png'/>
+    <div className='container lg mx-auto is-main-container'>
+       <div className='flex items-center justify-between px-[6rem] mb-4'>
+            <h2 className='text-[2rem]'>Explore</h2>
+            <img alt='' className='h-[23px]' src='../img/explore/vector.png'/>
        </div>
-        <div className='grid grid-cols-3 gap-3 pt-[2rem] p-[6rem]'>
-            {explore.map((post, index) => {
-                return (
-                    <img className='h-[50vh]' key ={index} src= {post.img}/>
-                )
-            })}
+	   
+
+        {/* TODO: implemnt infinite scroll feature */}
+        <div className='image-masonry'>
+            { // show loader while fetching data
+            isLoading ? <Loader /> : 
+            <div className='columns-2 md:columns-3 lg:columns-4 mb-10'>
+                {photos.map(photo => (
+            <img className="mb-4" key={photo.id} src={photo.src.large} alt={photo.alt} />
+            ))}
+            </div>
+            }
         </div>
     </div>
-)
+    )
 }
 
 export default Explore
