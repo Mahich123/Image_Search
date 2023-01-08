@@ -6,7 +6,7 @@ import Genre from "./Components/HomePage/Genre/Genre";
 import Explore from "./Components/HomePage/Explore/Explore";
 import Contributors from "./Components/HomePage/Contributors/Contributors2";
 import Contact from "./Components/HomePage/Contact/Contact";
-import Footer from "./Components/HomePage/Fotter/Footer";
+import Footer from "./Components/HomePage/Footer/Footer";
 import Image from "./Components/HomePage/Result/Image";
 
 
@@ -25,7 +25,7 @@ function App() {
         <Contributors />
         <Contact />
         <Footer />
-        <Image />
+        {/* <Image /> */}
       </Router>
     </div>
   );

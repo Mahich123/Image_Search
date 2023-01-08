@@ -21,3 +21,32 @@
     border: 1px solid;
 }
 
+/* !Wrap all main containers with this class */
+.is-main-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image-masonry{
+    min-height: 200px;
+}
+
+.image-search-loader{
+    /* background: rgba(255, 255, 255, 0.075); */
+    border-radius: 999px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.image-search-loader-container{
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+@media only screen and (max-width: 600px){
+	.is-main-container{
+        width: 90%;
+    }
+}

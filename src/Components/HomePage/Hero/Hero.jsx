@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useFetch from "../../useFetch";
 import "./hero.css";
 
 const Hero = () => {
   const [query, setQuery] = useState("");
-  const [imgs, setImgs] = useState([]);
+  const [setImgs] = useState([]);
   
-  const { data, loading, error } = useFetch(`https://imageapibysijey.mahi1233.repl.co/?q=${query}`);
+  const { data, error } = useFetch(`https://imageapibysijey.mahi1233.repl.co/?q=${query}`);
   if (error) console.log(data);
-
-  // console.log(data);
-  // useEffect(() => {
-  //   setQuery("bob");
-  // }, [])
   
   const get = async () => {
     setImgs(data.images);
