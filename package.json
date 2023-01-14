@@ -1,5 +1,5 @@
 {
-  "name": "image search",
+  "name": "image-search",
   "proxy": "https://api.pexels.com",
   "version": "0.1.0",
   "private": true,

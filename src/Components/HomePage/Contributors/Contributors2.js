@@ -22,12 +22,12 @@ const Contributors2 = () => {
     </div>
 
     {
-        data.map((elem,) => {
+        data.map((elem, i) => {
             return (
-               <>
-                 <div className=' items-center lg:w-[80vw] lg:flex lg:flex-row lg:items-center lg:justify-between lg:pt-[29px] pt-[1.5rem]'>
-                    <div className="flex items-center flex-col lg:flex-row">
-                        <img className='rounded-full w-[4rem] lg:w-[3rem] ' src={elem.avatar_url} />
+               <div key={i}>
+                 <div   className=' items-center lg:w-[80vw] lg:flex lg:flex-row lg:items-center lg:justify-between lg:pt-[29px] pt-[1.5rem]'>
+                    <div  className="flex items-center flex-col lg:flex-row">
+                        <img className='rounded-full w-[4rem] lg:w-[3rem]' src={elem.avatar_url} />
                         <h3 className='text-[#748F99] font-epi lg:pl-[12px] text-[16px] contName pt-[6px]'>{elem.login}</h3>
                     </div>
                     <p className='text-white font-epi work text-[14px] lg:w-[26vw]'><span className='text-[#748F99] font-epi contspan'>Contribution:</span> Frontend, UI, UX</p>
@@ -38,8 +38,9 @@ const Contributors2 = () => {
                                 </a>
                             </button>
                         </div>
-                    </div><div className='lg:w-[80%] lg:h-px lg:bg-white lg:m-[1.5rem]'></div>
-                </>
+                    </div>
+                    <div className='lg:h-px lg:bg-white lg:m-[1.5rem]'></div>
+                </div>
             )
         })
     }
