@@ -9,7 +9,7 @@ const Explore = () => {
 		const [isError, setIsError] = useState(false)
 		const [error, setError] = useState({})
 
-    const baseurl = "https://api.pexels.com/v1/search?query=modern&per_page=60";
+    const baseurl = "https://api.pexels.com/v1/search?query=decoration&per_page=50";
   
     useEffect(() => {
 			setIsLoading(true)
@@ -54,7 +54,7 @@ const Explore = () => {
 
   return (
     <div className='container lg mx-auto is-main-container'>
-       <div className='flex items-center justify-between px-[6rem] mb-4'>
+       <div className='flex items-center justify-between  mb-4'>
             <h2 className='text-[2rem]'>Explore</h2>
             <img alt='' className='h-[23px]' src='../img/explore/vector.png'/>
        </div>
@@ -71,6 +71,8 @@ const Explore = () => {
             </div>
             }
         </div>
+       
+       
     </div>
     )
 }
