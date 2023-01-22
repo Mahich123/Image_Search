@@ -14,32 +14,32 @@ const Genre = () => {
     </div>
     <div className="p-6 bg-card1 bg-cover rounded-[10px] flex flex-col justify-center">
         <h3 className="font-epi font-medium text-white my-[1rem] md:text-[x-large]">Models</h3>
-        <p className="font-epi text-white text-[10px]  break-all md:text-[13px] xl:w-[20vw] xl:text-[12px]">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. In massa velit.</p>
+        <p className="font-epi text-white text-[10px]  break-all md:text-[13px] xl:w-[20vw] xl:text-[12px]">Explore the latest trends in fashion, beauty, and lifestyle.</p>
         <p className="font-epi text-[11px] my-[1.5rem] text-white">Read More</p>
     </div>
 
     <div className="p-6 bg-card2 bg-cover rounded-[10px] flex flex-col justify-center">
         <h3 className="font-epi font-medium text-white text-[16px] my-[0.5rem] md:text-[x-large]">Landscape</h3>
-        <p className="font-epi text-white text-[10px] my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. In massa velit.</p>
+        <p className="font-epi text-white text-[10px] my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Explore the wide variety of landscapes from all over the world, including mountains, forests, deserts, and more.</p>
 
         <p className="font-epi text-white text-[11px] my-[1.5rem] ">Read More</p>   
     </div>
 
     <div className="p-6 bg-card3 bg-cover rounded-[10px] flex flex-col justify-center">
         <h3 className="font-epi font-medium text-white text-[16px] my-[0.5rem] md:text-[x-large]">Random</h3>
-        <p className="font-epi text-white text-[10px]  my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. In massa velit.</p>
+        <p className="font-epi text-white text-[10px]  my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Explore some random stills and wallpapers.</p>
         <p className="font-epi text-white text-[11px] my-[1.5rem] ">Read More</p>
     </div>
 
     <div className="p-6 bg-card4 bg-cover rounded-[10px] flex flex-col justify-center">
         <h3 className="font-epi font-medium text-white text-[16px] my-[0.5rem] md:text-[x-large]">Branding</h3>
-        <p className="font-epi text-white text-[10px]  my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. In massa velit.</p>
+        <p className="font-epi text-white text-[10px]  my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Explore images for businesses and individuals.</p>
         <p className="font-epi text-white text-[11px] my-[1.5rem]">Read More</p>
     </div>
 
     <div className="p-6 bg-card5 bg-cover rounded-[10px] flex flex-col justify-center">
         <h3 className="font-epi font-medium text-white text-[16px] my-[0.5rem] md:text-[x-large]">Events</h3>
-        <p className="font-epi text-white text-[10px]  my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. In massa velit.</p>
+        <p className="font-epi text-white text-[10px]  my-[0.3rem] md:text-[13px] xl:w-[20vw] xl:text-[12px]">Explore everything from corporate events to weddings.</p>
         <p className="font-epi text-white text-[11px] my-[1.5rem] ">Read More</p>
     </div>
   </div>
