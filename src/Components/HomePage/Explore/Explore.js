@@ -53,7 +53,7 @@ const Explore = () => {
     )
 
   return (
-    <div className='container lg mx-auto is-main-container'>
+    <div className='container  is-main-container'>
        <div className='flex items-center justify-between  mb-4'>
             <h2 className='text-[2rem]'>Explore</h2>
             <img alt='' className='h-[23px]' src='../img/explore/vector.png'/>
