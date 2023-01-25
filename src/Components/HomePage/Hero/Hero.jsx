@@ -1,23 +1,34 @@
 import React, { useState } from "react";
-import useFetch from "../../useFetch";
+import SearchResult from "../SearchResults/SearchResult";
+// import useFetch from "../../useFetch";
 import "./hero.css";
 
 const Hero = () => {
   const [query, setQuery] = useState("");
-  const [setImgs] = useState([]);
-  
-  const { data, error } = useFetch(`https://imageapibysijey.mahi1233.repl.co/?q=${query}`);
-  if (error) console.log(data);
-  
-  const get = async () => {
-    setImgs(data.images);
-    setQuery("");
-  }
+  const [images,setImages] = useState([]);
 
-  const handleSubmit = (e) => {
+
+  const baseurl = `https://api.pexels.com/v1/search?query=${query}`;
+  
+ 
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    get();
-  }
+    try {
+      const response = await fetch(baseurl, {
+        method: "GET",
+        mode: "cors",
+          headers: {
+            Authorization: process.env.REACT_APP_API_KEY,
+            "Content-Type": "application/json",
+          }
+      });
+      const data = await response.json();
+      setImages(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
     const handleChange = (e) => {
     setQuery(e.target.value);
@@ -35,6 +46,8 @@ const Hero = () => {
             <form onSubmit={handleSubmit} className="w-full input-group relative flex items-stretch">
               <input
                 type="search"
+                value={query}
+                onChange={handleChange}
                 className="py-3 px-5 form-control relative flex-auto min-w-0 block w-full text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none"
                 placeholder="Search"
                 aria-label="Search"
@@ -132,17 +145,8 @@ const Hero = () => {
       </section>
 
       
-      {/***** for testing api *****/}
 
-      {/* <div className="h-40 w-40">
-      {imgs.map((image, i) => (
-          <img
-            src={image}
-            key={i}
-            alt="img"
-          />
-        ))}
-      </div> */}
+      <SearchResult image={images} />
     </div>
   )
 }
