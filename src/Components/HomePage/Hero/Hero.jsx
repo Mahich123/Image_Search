@@ -32,7 +32,7 @@ const Hero = () => {
   };
 
     const handleChange = (e) => {
-    setQuery(e.target.value);
+      if (e.target.value) setQuery(e.target.value);
   };
 
   return (
