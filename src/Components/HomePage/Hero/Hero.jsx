@@ -19,7 +19,6 @@ const Hero = () => {
             })
             .then(c => c.json())
             .then(data => {
-                console.log(data)
                 setImages(data);
             })
             .catch(err => console.error(err))
