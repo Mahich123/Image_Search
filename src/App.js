@@ -10,6 +10,7 @@ import Footer from "./Components/HomePage/Footer/Footer";
 
 
 
+
 function App() {
   return (
     <div className="App overflow-hidden ">
@@ -17,6 +18,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          
        
         </Routes>
         <Genre />

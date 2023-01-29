@@ -1,20 +1,17 @@
 import React from 'react'
 
-const SearchResult = ({  image }) => {
-  console.log(image)
+const SearchResult = ({  images }) => {
+  // console.log(image)
 
-  if (!Array.isArray(image) || !image.length) {
+  if (!Array.isArray(images) || !images.length) {
     return null;
   }
 
   return (
     <div>
-      {image.map((r) => (
-        <div key={r.id}>
-          <img width="30%" src={r.src} alt={r.alt} />
-        </div>
-        
-      ))}
+   {images.length > 0 && images.map((image, index) => (
+  <img key={index} src={image.urls.small} alt={image.alt_description} />
+))}
        
     </div>
   
