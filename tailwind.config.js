@@ -18,6 +18,11 @@ module.exports = {
         "light-blue": "#B9C7CC",
         "prime-g": "#748F99",
       },
+      screens: {
+        'ts': {'min': '500px', 'max':'764px'},
+        'ms': {'min': '280px', 'max':'300px'},
+        // => @media (min-width: 992px) { ... }
+      },
       fontFamily: {
         epi: "'Epilogue', sans-serif"
       },

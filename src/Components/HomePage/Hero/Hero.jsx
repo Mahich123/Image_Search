@@ -8,7 +8,7 @@ const Hero = () => {
   const [images,setImages] = useState([]);
 
 
-  const baseurl = `https://api.pexels.com/v1/search?query=${query}`;
+  const baseurl = `https://api.pexels.com/v1/search?query=${query}&per_page=50`;
   
  
 
