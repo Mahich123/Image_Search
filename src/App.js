@@ -7,6 +7,8 @@ import Explore from "./Components/HomePage/Explore/Explore";
 import Contributors from "./Components/HomePage/Contributors/Contributors2";
 import Contact from "./Components/HomePage/Contact/Contact";
 import Footer from "./Components/HomePage/Footer/Footer";
+import ResultDesign from "./Components/HomePage/SearchResults/ResultDesign";
+
 
 
 
@@ -14,17 +16,27 @@ function App() {
   return (
     <div className="App overflow-hidden ">
       <Router>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
        
+        <Routes>
+          <Route path="/" element={
+            <>
+             <NavBar color="#303b4c"  logo="../img/logo/is(8).png" textColor="white"/>
+             <HomePage />
+             <Genre />
+            <Explore />
+            <Contributors />
+            <Contact />
+            </>
+          } />
+
+           <Route exact path="/resultdesign" element={
+            <>
+             <NavBar color="#EFEDED" logo="../img/logo/is(10).png" textColor="black"/>
+             <ResultDesign />
+            </>
+          } />
         </Routes>
-        <Genre />
-        <Explore />
-        <Contributors />
-        <Contact />
         <Footer />
-    
       </Router>
     </div>
   );
