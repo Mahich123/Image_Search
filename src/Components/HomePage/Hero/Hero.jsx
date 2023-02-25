@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SearchResult from "../SearchResults/SearchResult";
 // import useFetch from "../../useFetch";
 import "./hero.css";
 
@@ -8,7 +7,7 @@ const Hero = () => {
   const [images,setImages] = useState([]);
 
 
-  const baseurl = `https://api.pexels.com/v1/search?query=${query}&per_page=50`;
+  const baseurl = `https://api.pexels.com/v1/search?query=${query}&per_page=90`;
   
  
 
@@ -25,7 +24,7 @@ const Hero = () => {
       });
       const data = await response.json();
       console.log(data.photos)
-      setImages(data);
+      setImages(data.photos);
     } catch (error) {
       console.log(error);
     }
@@ -145,9 +144,6 @@ const Hero = () => {
           </figure>
       </section>
 
-      
-
-      <SearchResult images={images}/>
     </div>
   )
 }

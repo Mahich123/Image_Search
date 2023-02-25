@@ -9,13 +9,11 @@ const SearchResult = ({  images }) => {
 
   return (
     <div>
-   {images.length > 0 && images.map((image, index) => (
-  <img key={index} src={image.urls.small} alt={image.alt_description} />
-))}
-       
+      {images.map((photo) => (
+        <img key={photo.id} src={photo.src.medium} alt={photo.photographer} />
+      ))}
     </div>
-  
-  )
+  );
 }
 
 
