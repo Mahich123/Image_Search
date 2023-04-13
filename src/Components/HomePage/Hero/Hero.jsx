@@ -1,40 +1,51 @@
-import React, { useState } from "react";
-// import useFetch from "../../useFetch";
+import React, { useState , useContext } from "react";
+
+import { useNavigate } from 'react-router-dom';
+import { ImageContext } from "../../ImageContext";
 import "./hero.css";
 
 const Hero = () => {
-  const [query, setQuery] = useState("");
-  const [images,setImages] = useState([]);
+  // const [query, setQuery] = useState("");
+  // const [images,setImages] = useState([]);
+  const [inputValue, setInputValue] = useState("");
 
+  const { query, updateSearchQuery } = useContext(ImageContext);
 
-  const baseurl = `https://api.pexels.com/v1/search?query=${query}&per_page=90`;
-  
- 
+  const navigate = useNavigate();
+
+  // const baseurl = `https://api.pexels.com/v1/search?query=${query}&per_page=90`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(baseurl, {
-        method: "GET",
-        // mode: "cors",
-          headers: {
-            Authorization: process.env.REACT_APP_API_KEY,
-            "Content-Type": "application/json",
-          }
-      });
-      const data = await response.json();
-      console.log(data.photos)
-      setImages(data.photos);
-    } catch (error) {
-      console.log(error);
-    }
+    updateSearchQuery(inputValue);
+    navigate('/search');
+    // try {
+    //   const response = await fetch(baseurl, {
+    //     method: "GET",
+    //     // mode: "cors",
+    //       headers: {
+    //         Authorization: process.env.REACT_APP_API_KEY,
+    //         "Content-Type": "application/json",
+    //       }
+    //   });
+    //   const data = await response.json();
+    //   console.log(data.photos)
+    //   setImages(data.photos);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
     const handleChange = (e) => {
-    setQuery(e.target.value);
+      setInputValue(e.target.value);
+      updateSearchQuery(e.target.value);
   };
+ 
 
   return (
+
+
+    
     <div className="hero bg-dark-blue">      
       <section className="gallery">
         <div className="red w-full">
@@ -53,7 +64,7 @@ const Hero = () => {
                 aria-label="Search"
                 aria-describedby="button-addon2"
               />
-              <button onChange={handleChange} className="btn btn-search py-3 px-8 ml-2 bg-prime-g text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-800 hover:shadow-lg focus:bg-cyan-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-900 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="submit" id="button-addon2">
+              <button className="btn btn-search py-3 px-8 ml-2 bg-prime-g text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-800 hover:shadow-lg focus:bg-cyan-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-900 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="submit" id="button-addon2">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" className="w-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
                 </svg>
@@ -144,6 +155,7 @@ const Hero = () => {
           </figure>
       </section>
 
+      {/* <SearchResults images={images} /> */}
     </div>
   )
 }
