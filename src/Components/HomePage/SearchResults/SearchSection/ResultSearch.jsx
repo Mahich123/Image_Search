@@ -17,14 +17,20 @@ const ResultSearch = () => {
       </div>
 
       <div>
-        <ul className='flex overflow-x-auto py-4 gap-x-4 '>
-          {
-            tags.map((t) => {
-              return <li key={t} className='bg-[#DDDDDD] text-xs p-[6px] rounded-lg cursor-pointer'>{t}</li>
-            })
-          }
-        </ul>
-      </div>
+  <ul className='flex overflow-x-auto py-4 gap-x-4'>
+    {tags.map((t) => {
+      return (
+        <li key={t} className='bg-[#DDDDDD] text-xs px-2 py-1 rounded-lg cursor-pointer whitespace-nowrap'>
+          {t}
+        </li>
+      );
+    })}
+  </ul>
+</div>
+
+
+
+
     </div>
   )
 }

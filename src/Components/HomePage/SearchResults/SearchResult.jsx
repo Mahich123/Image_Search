@@ -85,7 +85,7 @@ function SearchResults() {
   </div> */}
 
 
-  <div className='image-masonry px-[8rem] pt-[1rem]'>
+  {/* <div className='image-masonry px-[8rem] pt-[1rem]'>
             { // show loader while fetching data
            
             <div className='columns-2 md:columns-3 lg:columns-4 mb-10'>
@@ -94,8 +94,27 @@ function SearchResults() {
             ))}
             </div>
             }
-        </div>
+        </div> */}
 
+
+
+    <div className='container lg mx-[84%] is-main-container'>
+       
+	   
+
+       
+        <div className='image-masonry'>
+            { // show loader while fetching data
+            <div className='columns-2 md:columns-3 lg:columns-4 mb-10'>
+            {images.map(result => (
+        <img className="mb-4" key={result.id} src={result.src.large} alt={result.alt} />
+        ))}
+        </div>
+            }
+        </div>
+       
+       
+    </div>
 
 
     </div>

@@ -45,8 +45,25 @@
     z-index: 9999;
 }
 
-@media only screen and (max-width: 600px){
-	.is-main-container{
-        width: 90%;
+@media (max-width: 768px) {
+    .image-masonry {
+      display: grid;
+      /* grid-template-columns: repeat(2, 1fr); */
+      grid-gap: 1rem;
     }
-}
+    .image-masonry img {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .image-masonry {
+      display: grid;
+      /* grid-template-columns: repeat(3, 1fr); */
+      grid-gap: 1rem;
+    }
+    .image-masonry img {
+      width: 100%;
+    }
+  }
+  
