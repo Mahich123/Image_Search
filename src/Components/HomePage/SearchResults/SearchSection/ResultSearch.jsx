@@ -1,5 +1,9 @@
 import React from 'react'
 
+const tags = [
+  'MINIMAL', 'NATURE', 'COLORFUL', 'ABSTRACT', 'FOOD', 'INTERIOR'
+]
+
 const ResultSearch = () => {
   return (
     <div className='flex flex-col justify-center items-center mr-[0.5rem]'>
@@ -12,14 +16,15 @@ const ResultSearch = () => {
         </div>
       </div>
 
-      <div className="genre flex flex-row">
-          <div className='bg-[#DDDDDD] m-2 px-[0.7rem] py-[0.5rem] rounded-lg cursor-pointer'>MINIMAL</div>
-          <div className='bg-[#DDDDDD] m-2 px-[0.7rem] py-[0.5rem] rounded-lg cursor-pointer'>NATURE</div>
-          <div className='bg-[#DDDDDD] m-2 px-[0.7rem] py-[0.5rem] rounded-lg cursor-pointer'>COLORFUL</div>
-          <div className='bg-[#DDDDDD] m-2 px-[0.7rem] py-[0.5rem] rounded-lg cursor-pointer'>ABSTRACT</div>
-          <div className='bg-[#DDDDDD] m-2 px-[0.7rem] py-[0.5rem] rounded-lg cursor-pointer'>FOOD</div>
-          <div className='bg-[#DDDDDD] m-2 px-[0.7rem] py-[0.5rem] rounded-lg cursor-pointer'>INTERIOR</div>
-        </div>
+      <div>
+        <ul className='flex overflow-x-auto py-4 gap-x-4 '>
+          {
+            tags.map((t) => {
+              return <li key={t} className='bg-[#DDDDDD] text-xs p-[6px] rounded-lg cursor-pointer'>{t}</li>
+            })
+          }
+        </ul>
+      </div>
     </div>
   )
 }

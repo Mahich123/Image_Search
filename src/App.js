@@ -14,6 +14,10 @@ import { ImageProvider } from "./Components/ImageContext";
 
 
 
+
+
+
+
 function App() {
 
 
@@ -32,6 +36,7 @@ function App() {
             <Explore />
             <Contributors />
             <Contact />
+        
             </>
           } />
 
@@ -44,11 +49,13 @@ function App() {
 
           <Route exact path="/search" element={
             <>
+              <NavBar color="#EFEDED" logo="../img/logo/is(10).png" textColor="black"/>
               <SearchResult  />
             </>
           } />
         </Routes>
         <Footer />
+       
       </Router>
     </div>
     </ImageProvider>

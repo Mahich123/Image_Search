@@ -64,7 +64,7 @@ const Explore = () => {
         <div className='image-masonry'>
             { // show loader while fetching data
             isLoading ? <Loader /> : 
-            <div className='columns-2 md:columns-3 lg:columns-4 mb-10'>
+            <div className='columns-2 md:columns-3 lg:columns-4 mb-10 container'>
                 {photos.map(photo => (
             <img className="mb-4" key={photo.id} src={photo.src.large} alt={photo.alt} />
             ))}
