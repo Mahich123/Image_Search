@@ -13,27 +13,12 @@ const Hero = () => {
 
   const navigate = useNavigate();
 
-  // const baseurl = `https://api.pexels.com/v1/search?query=${query}&per_page=90`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     updateSearchQuery(inputValue);
+    setInputValue(''); 
     navigate('/search');
-    // try {
-    //   const response = await fetch(baseurl, {
-    //     method: "GET",
-    //     // mode: "cors",
-    //       headers: {
-    //         Authorization: process.env.REACT_APP_API_KEY,
-    //         "Content-Type": "application/json",
-    //       }
-    //   });
-    //   const data = await response.json();
-    //   console.log(data.photos)
-    //   setImages(data.photos);
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
 
     const handleChange = (e) => {

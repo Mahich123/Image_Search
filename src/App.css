@@ -54,6 +54,10 @@
     .image-masonry img {
       width: 100%;
     }
+    .banner {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -64,6 +68,10 @@
     }
     .image-masonry img {
       width: 100%;
+    }
+    .banner {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
   }
   
