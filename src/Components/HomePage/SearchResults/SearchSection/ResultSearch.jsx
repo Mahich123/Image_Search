@@ -12,13 +12,15 @@ const ResultSearch = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    updateSearchQuery(inputValue);
-    setInputValue(''); // Clear the input value
+    if(inputValue) {
+      updateSearchQuery(inputValue);
+      setInputValue(''); // Clear the input value
+    }
+    
   };
 
     const handleChange = (e) => {
       setInputValue(e.target.value);
-      updateSearchQuery(e.target.value);
   };
  
 
@@ -30,7 +32,7 @@ const ResultSearch = () => {
           className='rounded w-[40vw]  h-[3vh] xl:w-[27vw] xl:h-[4.5vh] xl:pl-[0.5rem] text-[0.7rem] focus:outline-none' 
           type="text" 
           placeholder='Search....'
-          value={query}
+          value={inputValue}
           onChange={handleChange}
           
           />
