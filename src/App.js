@@ -47,7 +47,7 @@ function App() {
             </>
           } />
 
-          <Route exact path="/search" element={
+          <Route  path="/search" element={
             <>
               <NavBar color="#EFEDED" logo="../img/logo/is(10).png" textColor="black"/>
               <SearchResult  />
